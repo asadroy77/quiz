@@ -1,0 +1,30 @@
+.mainbutton{
+    background-color: cadetblue;
+    color: aliceblue;
+    text-decoration: none;
+    width:180px;
+    height:30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius:20px;
+    margin: 10px;
+
+}
+
+
+
+.buttonwrap{
+    background-color: darkgreen;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+
+.maincontentent{
+    display: flex;
+    height: 100vh;
+    gap: 5px;
+
+}

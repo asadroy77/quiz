@@ -1,0 +1,86 @@
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+
+
+const Attempt = () => {
+
+    let params = useParams()
+    const [data, setData] = useState([])
+    const [inputFields, setInputFields] = useState([])
+    const [question, setQuestion] = useState("");
+    const [index, setIndex] = useState(0)
+    const [checkedState, setCheckedState] = useState([]);
+
+
+    useEffect(() => {
+
+        const fetchkr = async () => {
+            try {
+                let questions = await axios.get('/get_questions?type=' + params.sub)
+                setData(questions.data)
+                setInputFields(questions.data[index].answers)
+                setCheckedState(new Array(questions.data[index].answers.length).fill(false))
+                setQuestion(questions.data[index].question_key)
+
+
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        fetchkr();
+    }, [index])
+
+
+
+
+    const changekro = (position) => {
+        const updatedCheckedState = checkedState.map((item, index) =>
+            index === position ? !item : item)
+        
+            setCheckedState(updatedCheckedState)
+        // let data1 = [...inputFields]
+        // data1[index][e.target.name] = !data1[index][e.target.name]
+        // setInputFields(data1)
+    }
+
+    const submit = (e) => {
+        e.preventDefault();
+
+        let final_edit = { ...data[index], checkedState }
+        console.log(final_edit)
+        if (index < data.length){
+            setIndex(index + 1)
+        }
+
+    }
+
+
+    return (<>
+        <form onSubmit={submit}>
+            <input name='question' placeholder='please enter your question'
+                defaultValue={question} />
+
+            {inputFields.map((input, index) => {
+                return (
+                    <div key={index}>
+                        <input
+                            name='answer'
+                            placeholder='Please enter your answer'
+                            defaultValue={input.answer} />
+                        <input type="checkbox" name="status" checked={checkedState[index]}
+                        onChange={() =>changekro(input._id)} />
+                    </div>
+                )
+            })}
+
+            <button onClick={submit}>Submit & Go Next</button>
+        </form>
+
+
+
+    </>
+    )
+}
+
+export default Attempt
