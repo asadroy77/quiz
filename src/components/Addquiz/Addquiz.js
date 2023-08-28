@@ -47,6 +47,7 @@ const submit = async (e) => {
       }
 
   }
+  // data submitted
   else{
    let finaldata = { questions:[{question_key:question,type_key:type.subject ,answers:[...inputFields]}],
    subject:type.subject } 
