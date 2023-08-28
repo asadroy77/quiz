@@ -6,7 +6,7 @@ export const Addquiz = ({type,setType}) => {
 
 const [inputFields, setInputFields] = useState([{answer:'',status: false}])
 const[question,setQuestion] = useState("");
-
+// ????
 
 const resetform = () =>{
   setInputFields([{answer:'', status:false }]);
