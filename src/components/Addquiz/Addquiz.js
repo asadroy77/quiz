@@ -29,6 +29,7 @@ const changekro = (index,e) =>{
 }
 
 const addFields = () => {
+  // add new field
   let newfield = { answer: '',status: false }
 
   setInputFields([...inputFields, newfield])
