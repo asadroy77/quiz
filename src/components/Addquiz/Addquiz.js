@@ -48,7 +48,7 @@ const submit = async (e) => {
       }
 
   }
-  // data submitted
+  
   else{
    let finaldata = { questions:[{question_key:question,type_key:type.subject ,answers:[...inputFields]}],
    subject:type.subject } 
@@ -60,7 +60,7 @@ const submit = async (e) => {
   }
 
 }
-  //  reset form after submit
+  //reset form after submit
   resetform();
   
 }
