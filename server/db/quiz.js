@@ -9,4 +9,4 @@ let quizSchema = mongoose.Schema({
 let quizapp = mongoose.model('QuizAPP', quizSchema);
 module.exports = quizapp;
 
-//schema for quiz 1 ads
+//schema for quiz added..
