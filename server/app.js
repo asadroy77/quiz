@@ -80,7 +80,7 @@ app.get('/session-check-karo', async (req, res)=>{
 
 
 app.post('/addq', async(req, res) => {
-// add quiz question
+// add quiz question .
     let newquiz = new quiz(req.body);
 
     await newquiz.save();
