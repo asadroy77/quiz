@@ -14,7 +14,7 @@ mongoose.connect('mongodb://localhost:27017/quizDB', (err, connection) => {
 })
 
 app.post('/signup-karo', (req, res)=>{
-        
+        //user added
   let nyaUser = new User(req.body);
 
   nyaUser.save();
