@@ -102,7 +102,7 @@ app.put('/addq-withexistingsubject',async(req,res)=>{
 
 
 app.get('/get_questions',async(req, res)=>{
-   //get questions
+   //get questions ....
     let ques = await quiz.findById({_id:req.query.id})
     res.json(ques)
 })
