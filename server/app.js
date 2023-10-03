@@ -146,7 +146,7 @@ quiz.findById(req.query.id, function(err, result) {
 // await quiz.save(function (err) {
 //     if (err) return handleError(err);
 //     console.log('the subdocs were removed');
-//   });
+//   })
 
 
  
@@ -171,7 +171,7 @@ app.put('/update_question', async (req, res)=>{
         result.questions.id(req.body._id).question_key = req.body.question_key
         result.questions.id(req.body._id).answers = req.body.answers
         // result.posts.id(req.body._id).text = req.body.text;
-        // result.markModified('posts'); 
+        // result.markModified('posts')
         result.save(function(saveerr, saveresult) {
           if (!saveerr) {
             res.status(200).send(saveresult);
