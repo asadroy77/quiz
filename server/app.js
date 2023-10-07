@@ -129,7 +129,8 @@ quiz.findById(req.query.id, function(err, result) {
             res.status(400).send(removeerr.message);
           }
         });
-        // result.markModified('posts'); 
+        // result.markModified('posts'); ..
+
         result.save(function(saveerr, saveresult) {
           if (!saveerr) {
             res.json({success:true});
@@ -186,6 +187,7 @@ app.put('/update_question', async (req, res)=>{
   });
 
     // try{
+
 
     //     await quiz.findByIdAndUpdate(req.body._id, req.body);
         
