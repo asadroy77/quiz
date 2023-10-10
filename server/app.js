@@ -109,6 +109,7 @@ app.get('/get_questions',async(req, res)=>{
 
 
 app.get('/fetch_types' , async (req,res)=>{
+  //  fetch types
     let alldata = await quiz.find({})
     res.json(alldata)
 })
