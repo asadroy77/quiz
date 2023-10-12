@@ -203,6 +203,7 @@ app.put('/update_question', async (req, res)=>{
 
 
 app.post('/attempted_quiz', async(req, res) => {
+  // attempt quiz and get result 
   
     let total_marks = req.body.data.questions.length
     let result = req.body.data.questions.map(element => {
