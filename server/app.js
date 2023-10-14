@@ -217,6 +217,7 @@ app.post('/attempted_quiz', async(req, res) => {
         })
 
        return scored;   
+      //
     });
 
     let total_marks_obt = result.reduce((a,b)=>{
