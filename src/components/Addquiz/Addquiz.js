@@ -14,7 +14,7 @@ const resetform = () =>{
   setType({});
 }
 
-// handle change
+// handle change 1
 
 const handleFormChange = (index, event) => {
   let data = [...inputFields]
