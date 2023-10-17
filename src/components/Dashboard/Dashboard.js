@@ -21,7 +21,7 @@ const Dashboard = () => {
 
   
   return (<>
-  <h1>these are the questions</h1>
+  <h1>these are questions </h1>
   <table>
     <tbody>
   {questionstate.map((item,index)=>{
