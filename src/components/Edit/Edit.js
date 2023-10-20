@@ -9,6 +9,7 @@ const Edit = () => {
     let [editquestion ,setEditquestion]=useState({});
     const [inputFields, setInputFields] = useState([])
     const[question,setQuestion] = useState("");
+    // edit question
 
 useEffect(()=>{
     const find_question = async()=>{
