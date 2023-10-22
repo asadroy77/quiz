@@ -4,6 +4,9 @@ import { Form } from "react-bootstrap";
 import Subject from "./subject";
 
 const MultiForm = () => {
+
+  // mutlistep form
+  
   
   const [type ,setType] = useState({});
 
