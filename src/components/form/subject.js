@@ -75,7 +75,7 @@ export default function Subject({type,setType}) {
     content();
   },[])
 
-  // const  options = ["asad","asad10"]
+  
 
 
 
