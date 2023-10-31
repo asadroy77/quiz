@@ -41,7 +41,7 @@ const Signup = () => {
 
         // axios.put('/signup-karo', meraData);
         // get aur delete m data nahi jyega
-        // data.reset();
+        // data.reset()
         navigate('/login')
 
        
