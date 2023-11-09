@@ -5,7 +5,7 @@ import store from "../../store/store";
 
 // 
 // 
-// 
+//wre
 
 
 const Result = () => {
