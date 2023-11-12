@@ -5,8 +5,7 @@ import store from "../../store/store";
 
 // 
 // 
-//wre
-
+//wr11
 
 const Result = () => {
     let [data,setData] = useState([]);
