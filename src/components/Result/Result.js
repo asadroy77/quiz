@@ -8,7 +8,7 @@ import store from "../../store/store";
 //wr12
 
 const Result = () => {
-    let [data,setData] = useState([]);
+    let [data,setData] = useState([])
     
     let reducer = useSelector((store)=>{
       return store.userReducer;

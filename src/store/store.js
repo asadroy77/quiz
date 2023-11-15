@@ -6,6 +6,8 @@ let initialData = {
     state:"loading"
 }
 
+// 
+
 function userReducer(olData = initialData, newData){
    
     if(newData.type == "User_ADDED"){
