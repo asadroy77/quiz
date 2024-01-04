@@ -74,7 +74,7 @@ const delete_answer = (index) =>{
 }  
 
   
-// //   const p_status= totaldata.length > 0 ? false : true 
+// wer  const p_status= totaldata.length > 0 ? false : true 
   
   return (<> 
          <form onSubmit={submit}>
